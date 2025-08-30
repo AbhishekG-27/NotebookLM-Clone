@@ -23,7 +23,7 @@ const AnalysisArea = ({ fileId }: { fileId: string }) => {
     } else {
       setPdfPreviewUrl(null);
     }
-  }, [selectedFile]);
+  }, []);
 
   return (
     <div className="flex w-full h-screen overflow-y-hidden">

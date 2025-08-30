@@ -1,6 +1,6 @@
 "use client";
 import { usePdf } from "@/contexts/PdfContext";
-import { CheckCircle, Upload, AlertCircle, X } from "lucide-react";
+import { CheckCircle, Upload, AlertCircle } from "lucide-react";
 import { useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 
@@ -9,6 +9,7 @@ const FileUploader = () => {
   const [error, setError] = useState<string | null>(null);
 
   const onDrop = useCallback(
+    /* eslint-disable @typescript-eslint/no-explicit-any */
     (acceptedFiles: File[], rejectedFiles: any[]) => {
       setError(null);
 
